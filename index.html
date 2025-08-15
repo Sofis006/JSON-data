@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,6 +89,44 @@
             </ul>
         </section>
     </div>
+<script>
+let morral = {
+    "color" : "azul" ,
+    "tamaño" : "mediano" ,
+    "contenido" : [
+        {
+            "tipo" : "libro" , 
+            "titulo" : "El poder de ls habitos" , 
+            "autor" : "Charles Duhigg" , 
+},
+        {
+            "tipo" : "cuaderno" , 
+            "titulo" : "apuntes de clase" , 
+            "autor" : "Maria Lopez" , 
+}
+]
+}
+console.log(morral) ;
+document.getElementById("color").innerHTML = morral.color ;
+document.getElementById("tamaño").innerHTML = morral.tamaño ;
+if (morral.tamaño === mediano) {
+    document.getElementById("miMorral").style.fontSize = "05rem" ;
+} else if (morral.tamaño === "mediano") {
+     document.getElementById("miMorral").style.fontSize = "1rem" ;
+} else if (morral.tamaño === "grande") {
+    document.getElementById("miMorral").style.fontSize = "2rem" ;
+}
+document.getElementById("colorMorral").innerHTML = Color del morral : ${morral.color} ;
+
+document.getElementById("conteidoMorral").innerHTML = morral.contenido.map(item => {
+    return <p>${item.tipo}: ${item.titulo} por ${item.autor}</p> ;
+}).join(¨);
+
+</script>
+
+
+
+
 
     <script src="script.js"></script>
 </body>
